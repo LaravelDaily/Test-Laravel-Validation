@@ -19,6 +19,7 @@ Route::resource('projects', \App\Http\Controllers\ProjectController::class);
 Route::resource('products', \App\Http\Controllers\ProductController::class);
 Route::resource('teams', \App\Http\Controllers\TeamController::class);
 Route::resource('items', \App\Http\Controllers\ItemController::class);
+Route::put('users/{user}', [\App\Http\Controllers\UserController::class, 'update']);
 
 Route::get('/', function () {
     return view('welcome');

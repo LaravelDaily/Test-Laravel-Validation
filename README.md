@@ -80,3 +80,11 @@ Test method `test_form_request_validation()`.
 
 ---
 
+## Task 7. Update Forbidden Field.
+
+In `app/Http/Controllers/UserController.php` file, in `update` method, the code updates all the fields. But users.is_admin should not be updated, even if it's passed via the request. Change the line with `$request->all()` to avoid this security issue of updating the admin.
+
+Test method `test_update_forbidden_field()`.
+
+---
+

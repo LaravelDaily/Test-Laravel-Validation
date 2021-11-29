@@ -81,4 +81,22 @@ class ValidationTest extends TestCase
         ]);
         $response->assertStatus(200);
     }
+
+    public function test_update_forbidden_field()
+    {
+        $user = User::factory()->create();
+
+        // field is_admin should not be possible to update
+        $updatedUser = [
+            'name' => 'Updated name',
+            'email' => 'updated@email.com',
+            'is_admin' => 1
+        ];
+        $response = $this->put('users/' . $user->id, $updatedUser);
+        $response->assertStatus(200);
+
+        $user = User::where('name', $updatedUser['name'])->first();
+        $this->assertNotNull($user);
+        $this->assertEquals(false, $user->is_admin);
+    }
 }
