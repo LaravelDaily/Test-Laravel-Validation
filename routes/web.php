@@ -18,6 +18,7 @@ Route::post('profile', [\App\Http\Controllers\ProfileController::class, 'update'
 Route::resource('projects', \App\Http\Controllers\ProjectController::class);
 Route::resource('products', \App\Http\Controllers\ProductController::class);
 Route::resource('teams', \App\Http\Controllers\TeamController::class);
+Route::resource('items', \App\Http\Controllers\ItemController::class);
 
 Route::get('/', function () {
     return view('welcome');
