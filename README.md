@@ -64,3 +64,11 @@ Test method `test_validation_specific_error_shown_in_blade()`.
 
 ---
 
+## Task 5. Old Values Staying After Validation Error.
+
+In `resources/views/teams/create.blade.php` file, the value of "name" field should remain in the form, after failed validation. Change the Blade file so that it would show old value.
+
+Test method `test_old_value_stays_in_form_after_validation_error()`.
+
+---
+

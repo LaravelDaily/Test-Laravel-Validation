@@ -59,4 +59,12 @@ class ValidationTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('The name field is required.');
     }
+
+    public function test_old_value_stays_in_form_after_validation_error()
+    {
+        // Post without name should fail
+        $response = $this->followingRedirects()->post('teams', ['name' => 'Abc']);
+        $response->assertStatus(200);
+        $response->assertSee('Abc');
+    }
 }
