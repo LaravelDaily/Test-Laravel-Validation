@@ -21,6 +21,7 @@ Route::resource('teams', \App\Http\Controllers\TeamController::class);
 Route::resource('items', \App\Http\Controllers\ItemController::class);
 Route::put('users/{user}', [\App\Http\Controllers\UserController::class, 'update']);
 Route::resource('buildings', \App\Http\Controllers\BuildingController::class);
+Route::resource('articles', \App\Http\Controllers\ArticleController::class);
 
 Route::get('/', function () {
     return view('welcome');

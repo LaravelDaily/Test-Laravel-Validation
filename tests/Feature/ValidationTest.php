@@ -104,4 +104,9 @@ class ValidationTest extends TestCase
         $response->assertSee('Please enter the name');
     }
 
+    public function test_custom_validation_rule()
+    {
+        $response = $this->post('articles', ['title' => 'lowercase']);
+        $response->assertSessionHasErrors('title')->assertStatus(302);
+    }
 }
