@@ -33,3 +33,18 @@ Test method `test_simple_validation_rules()`.
 
 ---
 
+## Task 2. Array Validation.
+
+Imagine your form has fields as an array:
+
+```
+<input name="profile[name]" ... />
+<input name="profile[email]" ... />
+```
+
+In `app/Http/Controllers/ProfileController.php` file, the `update()` method need validation rules: profile[name] and profile[email] fields should be required.
+
+Test method `test_array_validation()`.
+
+---
+
