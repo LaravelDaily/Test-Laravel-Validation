@@ -88,3 +88,11 @@ Test method `test_update_forbidden_field()`.
 
 ---
 
+## Task 8. Customize Validation Messages.
+
+In `app/Http/Controllers/BuildingController.php` file, in `store` method, the code uses `StoreBuildingRequest` Form Request class. Change that class to customize the validation rule for "name" field as "required", to show message "Please enter the name" instead of the default "The field name is required".
+
+Test method `test_custom_error_message()`.
+
+---
+
