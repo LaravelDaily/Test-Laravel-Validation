@@ -56,3 +56,11 @@ Test method `test_validation_errors_shown_in_blade()`.
 
 ---
 
+## Task 4. Showing a Specific Validation Error.
+
+In `resources/views/products/create.blade.php` file, show the validation error for `"name" => "required"`, using a specific Blade directive to show one specific error.
+
+Test method `test_validation_specific_error_shown_in_blade()`.
+
+---
+

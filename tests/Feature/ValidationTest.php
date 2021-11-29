@@ -51,4 +51,12 @@ class ValidationTest extends TestCase
         $response->assertSee('The name field is required.');
         $response->assertSee('The description field is required.');
     }
+
+    public function test_validation_specific_error_shown_in_blade()
+    {
+        // Post without name should fail
+        $response = $this->followingRedirects()->post('products');
+        $response->assertStatus(200);
+        $response->assertSee('The name field is required.');
+    }
 }
