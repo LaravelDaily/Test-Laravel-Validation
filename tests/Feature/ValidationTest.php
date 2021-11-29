@@ -42,4 +42,13 @@ class ValidationTest extends TestCase
         ]);
         $response->assertStatus(200);
    }
+
+    public function test_validation_errors_shown_in_blade()
+    {
+        // Post without name and description should fail
+        $response = $this->followingRedirects()->post('projects');
+        $response->assertStatus(200);
+        $response->assertSee('The name field is required.');
+        $response->assertSee('The description field is required.');
+    }
 }

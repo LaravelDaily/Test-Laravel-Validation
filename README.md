@@ -48,3 +48,11 @@ Test method `test_array_validation()`.
 
 ---
 
+## Task 3. Showing Validation Errors.
+
+In `resources/views/projects/create.blade.php` file, show the validation errors, for `"name" => "required", "description" => "required"` rules. Use whatever HTML structure you want, like `<ul><li>error</li><li>error 2</li></ul>`. No design needed, the test will just check if the error messages are present.
+
+Test method `test_validation_errors_shown_in_blade()`.
+
+---
+
