@@ -98,7 +98,7 @@ Test method `test_custom_error_message()`.
 
 ## Task 9. Your Own Validation Rule.
 
-In `app/Http/Controllers/ArticleController.php` file, in `store` method, the code uses `Uppercase` validation rule that you need to create with Artisan command, and fill in with the rule of "title" having first letter as uppercase.
+In `app/Http/Controllers/ArticleController.php` file, in `store` method, the code uses `Uppercase` validation rule that you need to create with Artisan command, and fill in with the rule of "title" having first letter as uppercase with the error message "The title does not start with an uppercased letter".
 
 Test method `test_custom_validation_rule()`.
 
