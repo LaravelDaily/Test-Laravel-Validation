@@ -21,8 +21,7 @@ class BuildingController extends Controller
      */
     public function store(StoreBuildingRequest $request)
     {
-        $validator = $request;
-        Building::create($validator->validated());
+        Building::create($request->validated());
 
         return 'Success';
     }

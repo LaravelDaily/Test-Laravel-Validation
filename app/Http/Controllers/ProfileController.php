@@ -17,7 +17,10 @@ class ProfileController extends Controller
             "profile.email" => "required"
         ]);
 
-        auth()->user()->update($request->profile ?? []);
+        auth()->user()->update([
+            "name" => request("profile.name"),
+            "email" => request("profile.email")
+        ]);
 
         return 'Success';
     }
