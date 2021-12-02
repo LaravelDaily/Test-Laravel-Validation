@@ -5,7 +5,9 @@
     <input type="text" name="name" />
     <br />
     {{-- TASK: Customize the validation error message to say "Please enter the name" --}}
-    @error('name') {{ $message }} @enderror
+    @error('name')
+        {{ $message }}
+    @enderror
     <br /><br />
     <button type="submit">Save</button>
 </form>
