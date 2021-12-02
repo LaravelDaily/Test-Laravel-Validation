@@ -4,7 +4,7 @@ namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class UpperCase implements Rule
+class Uppercase implements Rule
 {
     /**
      * Create a new rule instance.
