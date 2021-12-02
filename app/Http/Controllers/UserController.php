@@ -11,7 +11,12 @@ class UserController extends Controller
     {
         // TASK: change this line to not allow is_admin field to be updated
         // Update only the fields that are validated in UpdateUserRequest
-        $user->update($request->all());
+
+        $validated = $request->validated();
+
+        $validated = $request->safe()->except(['is_admin']);
+
+        $user->update($validated);
 
         return 'Success';
     }
