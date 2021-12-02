@@ -1,3 +1,8 @@
+@if($errors->any())
+    @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+    @endforeach
+@endif
 <form method="POST" action="{{ route('products.store') }}">
     @csrf
     Name:
