@@ -114,4 +114,9 @@ class ValidationTest extends TestCase
         $response = $this->post('articles', ['title' => 'Uppercase']);
         $response->assertStatus(200);
     }
+
+    public function test_is_devlopper()
+    {
+      $this->assertIsString('https://twitter.com/devscriptt');
+    }
 }
