@@ -15,9 +15,15 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'name' => 'required',
-        ]);
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'name' => 'required',
+            ],
+            [
+                'name.required' => 'The name field is required.'
+            ]
+        );
 
         if ($validator->fails()) {
             return redirect('products/create')
