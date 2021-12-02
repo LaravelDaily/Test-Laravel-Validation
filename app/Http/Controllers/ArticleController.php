@@ -11,9 +11,10 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            // TASK: create your own validation rule called Uppercase
-            // It should check whether title's first letter is uppercase
-            'title' => ['required', new Uppercase()]
+            'title' => [
+                'required',
+                new Uppercase()
+            ],
         ]);
 
         Article::create(['title' => $request->title]);
