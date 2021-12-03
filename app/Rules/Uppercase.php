@@ -25,7 +25,7 @@ class Uppercase implements Rule
      */
     public function passes($attribute, $value)
     {
-        $firstChar = explode('', $value)[0];
+        $firstChar = $value[0];
 
         return $firstChar === strtoupper($firstChar);
     }
