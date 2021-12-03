@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreItemRequest;
 use App\Models\Item;
 
-class ItemController extends Controller
+class
+ItemController extends Controller
 {
     // TASK: generate that StoreItemRequest class
     //   with authorization returning TRUE
