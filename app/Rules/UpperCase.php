@@ -3,6 +3,7 @@
 namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Support\Str;
 
 class UpperCase implements Rule
 {
@@ -26,7 +27,7 @@ class UpperCase implements Rule
     public function passes($attribute, $value)
     {
         //
-        return ucfirst($value) === $value;
+        return Str::ucfirst($value) === $value;
     }
 
     /**
