@@ -1,4 +1,13 @@
 {{-- Form without any design --}}
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 {{-- TASK: add the validation errors here - with whatever HTML structure you want --}}
 {{-- in case of title/description empty, visitor should see --}}
@@ -12,7 +21,7 @@
     <br /><br />
     Description:
     <br />
-    <input type="text" name="description" />
+    <input type="text" name="description" class="@error('title') is-invalid @enderror"/>
     <br /><br />
     <button type="submit">Save</button>
 </form>
