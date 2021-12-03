@@ -9,9 +9,14 @@ class PostController extends Controller
 {
     public function store(Request $request)
     {
-        $request->validate(
-            // ... TASK: write validation here so that "title" field
-            //           would be required and unique in the "posts" DB table
+        $rules = [
+            'title' => 'required|unique:App\Models\Post,title'
+        ];
+        $message = [
+            'title.required' => 'a tittle is required',
+            'title.unique' => 'a title must unique'
+        ];
+        $request->validate($rules,$message
         );
 
         // Saving the post
