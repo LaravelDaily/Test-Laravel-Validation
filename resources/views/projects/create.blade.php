@@ -9,10 +9,16 @@
     Title:
     <br />
     <input type="text" name="title" />
+    @error('name')
+    <ul>{{$message}}</ul>
+    @enderror
     <br /><br />
     Description:
     <br />
     <input type="text" name="description" />
+    @error('description')
+    <ul>{{$message}}</ul>
+    @enderror
     <br /><br />
     <button type="submit">Save</button>
 </form>
