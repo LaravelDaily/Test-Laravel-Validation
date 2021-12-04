@@ -30,4 +30,11 @@ class StoreBuildingRequest extends FormRequest
             'name' => 'required'
         ];
     }
+
+    public function attributes()
+    {
+        return [
+            'name' => 'Please enter the name'
+        ];
+    }
 }
