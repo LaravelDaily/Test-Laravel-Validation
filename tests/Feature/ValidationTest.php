@@ -65,19 +65,19 @@ class ValidationTest extends TestCase
         $response->assertSee('Abc');
     }
 
-//     public function test_form_request_validation()
-//     {
-//         // Post with no name/description should fail
-//         $response = $this->post('items');
-//         $response->assertStatus(302);
+    public function test_form_request_validation()
+    {
+        // Post with no name/description should fail
+        $response = $this->post('items');
+        $response->assertStatus(302);
 
-//         // Post with all the fields should succeed
-//         $response = $this->post('items', [
-//             'name' => 'Abc',
-//             'description' => 'Xyz',
-//         ]);
-//         $response->assertStatus(200);
-//     }
+        // Post with all the fields should succeed
+        $response = $this->post('items', [
+            'name' => 'Abc',
+            'description' => 'Xyz',
+        ]);
+        $response->assertStatus(200);
+    }
 
 //     public function test_update_forbidden_field()
 //     {
