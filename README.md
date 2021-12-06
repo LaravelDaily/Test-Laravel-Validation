@@ -30,7 +30,7 @@ Good luck!
 In `app/Http/Controllers/PostController.php` file, the `store()` method need validation rules: title should be required and unique.
 
 Test method `test_simple_validation_rules()`.
-
+ 
 ---
 
 ## Task 2. Array Validation.
@@ -45,7 +45,7 @@ Imagine your form has fields as an array:
 In `app/Http/Controllers/ProfileController.php` file, the `update()` method need validation rules: profile[name] and profile[email] fields should be required.
 
 Test method `test_array_validation()`.
-
+ 
 ---
 
 ## Task 3. Showing Validation Errors.
@@ -69,7 +69,7 @@ Test method `test_validation_specific_error_shown_in_blade()`.
 In `resources/views/teams/create.blade.php` file, the value of "name" field should remain in the form, after failed validation. Change the Blade file so that it would show old value.
 
 Test method `test_old_value_stays_in_form_after_validation_error()`.
-
+ 
 ---
 
 ## Task 6. Form Request Validation.
