@@ -74,7 +74,7 @@ Test method `test_old_value_stays_in_form_after_validation_error()`.
 
 ## Task 6. Form Request Validation.
 
-In `app/Http/Controllers/ItemController.php` file, validation is performed via class StoreItemRequest, but that class doesn't exist, intentionally. Your task is to create it, with parameters of authorized true, and validation rules of name/title as required fields.
+In `app/Http/Controllers/ItemController.php` file, validation is performed via class StoreItemRequest, but that class doesn't exist, intentionally. Your task is to create it, with parameters of authorized true, and validation rules of name/description as required fields.
 
 Test method `test_form_request_validation()`.
 
