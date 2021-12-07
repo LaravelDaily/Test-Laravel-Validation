@@ -97,12 +97,12 @@ class ValidationTest extends TestCase
         $this->assertFalse($user->is_admin);
     }
 
-    // public function test_custom_error_message()
-    // {
-    //     $response = $this->followingRedirects()->post('buildings');
-    //     $response->assertStatus(200);
-    //     $response->assertSee('Please enter the name');
-    // }
+    public function test_custom_error_message()
+    {
+        $response = $this->followingRedirects()->post('buildings');
+        $response->assertStatus(200);
+        $response->assertSee('Please enter the name');
+    }
 
     // public function test_custom_validation_rule()
     // {
