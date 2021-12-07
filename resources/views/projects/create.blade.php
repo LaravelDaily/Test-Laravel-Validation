@@ -4,6 +4,9 @@
 {{-- in case of title/description empty, visitor should see --}}
 {{-- "The name field is required." and "The description field is required." --}}
 
+@foreach ($errors->all() as $error)
+<p>{{$error}}</p>
+@endforeach
 <form method="POST" action="{{ route('projects.store') }}">
     @csrf
     Title:
