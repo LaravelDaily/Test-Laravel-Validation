@@ -18,6 +18,16 @@ class StoreBuildingRequest extends FormRequest
     {
         return true;
     }
+    /**
+    *Get Custome messages when validate
+    * @return array
+    */
+    public function messages()
+    {
+        return [
+            'name' => "Please enter the name"
+        ];
+    }
 
     /**
      * Get the validation rules that apply to the request.

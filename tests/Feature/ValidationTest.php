@@ -97,21 +97,21 @@ class ValidationTest extends TestCase
         $this->assertFalse($user->is_admin);
     }
 
-//     public function test_custom_error_message()
-//     {
-//         $response = $this->followingRedirects()->post('buildings');
-//         $response->assertStatus(200);
-//         $response->assertSee('Please enter the name');
-//     }
+    // public function test_custom_error_message()
+    // {
+    //     $response = $this->followingRedirects()->post('buildings');
+    //     $response->assertStatus(200);
+    //     $response->assertSee('Please enter the name');
+    // }
 
-//     public function test_custom_validation_rule()
-//     {
-//         $response = $this->post('articles', ['title' => 'lowercase']);
-//         $response->assertSessionHasErrors([
-//             'title' => 'The title does not start with an uppercased letter',
-//         ])->assertStatus(302);
+    // public function test_custom_validation_rule()
+    // {
+    //     $response = $this->post('articles', ['title' => 'lowercase']);
+    //     $response->assertSessionHasErrors([
+    //         'title' => 'The title does not start with an uppercased letter',
+    //     ])->assertStatus(302);
 
-//         $response = $this->post('articles', ['title' => 'Uppercase']);
-//         $response->assertStatus(200);
-//     }
+    //      $response = $this->post('articles', ['title' => 'Uppercase']);
+    //     $response->assertStatus(200);
+    // }
 }

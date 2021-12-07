@@ -29,6 +29,7 @@ Good luck!
 
 In `app/Http/Controllers/PostController.php` file, the `store()` method need validation rules: title should be required and unique.
 
+
 Test method `test_simple_validation_rules()`.
 
 ---
