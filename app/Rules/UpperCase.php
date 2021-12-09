@@ -27,7 +27,7 @@ class UpperCase implements Rule
     public function passes($attribute, $value)
     {
         //
-        return Str::ucfirst($value) === $value;
+        return $value[0] === strtoupper($value[0]);
     }
 
     /**
