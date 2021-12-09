@@ -111,7 +111,7 @@ class ValidationTest extends TestCase
             'title' => 'The title does not start with an uppercased letter',
         ])->assertStatus(302);
 
-        $response = $this->post('articles', ['title' => 'Uppercase']);
+         $response = $this->post('articles', ['title' => 'Uppercase']);
         $response->assertStatus(200);
     }
 }
