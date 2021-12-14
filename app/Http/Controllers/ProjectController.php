@@ -19,7 +19,6 @@ class ProjectController extends Controller
             'name' => 'required',
             'description' => 'required'
         ]);
-
         if ($validator->fails()) {
             return redirect('projects/create')
                 ->withErrors($validator);

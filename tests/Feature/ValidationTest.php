@@ -24,7 +24,7 @@ class ValidationTest extends TestCase
         $response = $this->post('posts', ['title' => 'Some title']);
         $response->assertSessionHasErrors('title')->assertStatus(302);
     }
-
+ 
     public function test_array_validation()
     {
         $user = User::factory()->create();
@@ -42,14 +42,16 @@ class ValidationTest extends TestCase
         ]);
         $response->assertStatus(200);
    }
-
     public function test_validation_errors_shown_in_blade()
     {
         $response = $this->followingRedirects()->post('projects');
         $response->assertStatus(200);
+
+        
         $response->assertSee('The name field is required.');
         $response->assertSee('The description field is required.');
     }
+
 
     public function test_validation_specific_error_shown_in_blade()
     {
@@ -87,7 +89,7 @@ class ValidationTest extends TestCase
         $updatedUser = [
             'name' => 'Updated name',
             'email' => 'updated@email.com',
-            'is_admin' => 1
+            
         ];
         $response = $this->put('users/' . $user->id, $updatedUser);
         $response->assertStatus(200);
@@ -114,4 +116,5 @@ class ValidationTest extends TestCase
         $response = $this->post('articles', ['title' => 'Uppercase']);
         $response->assertStatus(200);
     }
+    
 }
