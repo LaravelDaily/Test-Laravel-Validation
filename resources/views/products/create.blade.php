@@ -1,5 +1,11 @@
 <form method="POST" action="{{ route('products.store') }}">
     @csrf
+
+    @error('name')
+        <ul>
+            <li>{{ $message }}</li>
+        </ul>
+    @enderror
     Name:
     <br />
     <input type="text" name="name" />
