@@ -35,7 +35,7 @@ class UpperCase implements Rule, ValidatorAwareRule
      */
     public function passes($attribute, $value)
     {
-        return ucfirst($value) === $value;
+        return preg_match('~^\p{Lu}~u', $value);
     }
 
     /**
