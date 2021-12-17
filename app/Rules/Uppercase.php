@@ -35,6 +35,6 @@ class Uppercase implements Rule
      */
     public function message()
     {
-        return 'Title should start with uppercase letter.';
+        return 'The title does not start with uppercased letter';
     }
 }
