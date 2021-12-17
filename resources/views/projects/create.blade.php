@@ -8,11 +8,25 @@
     @csrf
     Title:
     <br />
-    <input type="text" name="title" />
+    <div>
+        <input type="text" name="name" @error('name') is-invalid @enderror />
+        @error('name')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+    </div>
     <br /><br />
     Description:
     <br />
-    <input type="text" name="description" />
+    <div>
+        <input type="text" name="description" @error('description') is-invalid @enderror />
+        @error('description')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+    </div>
     <br /><br />
     <button type="submit">Save</button>
 </form>
