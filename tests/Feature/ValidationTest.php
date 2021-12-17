@@ -106,7 +106,7 @@ class ValidationTest extends TestCase
 
     public function test_custom_validation_rule()
     {
-        $this->withoutExceptionHandling();
+        /*$this->withoutExceptionHandling();*/
 
         $response = $this->post('articles', ['title' => 'lowercase']);
         $response->assertSessionHasErrors([
