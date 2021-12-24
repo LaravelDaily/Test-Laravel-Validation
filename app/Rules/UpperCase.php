@@ -4,6 +4,7 @@ namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Contracts\Validation\ValidatorAwareRule;
+use Illuminate\Support\Str;
 
 class UpperCase implements Rule, ValidatorAwareRule
 {
@@ -35,7 +36,7 @@ class UpperCase implements Rule, ValidatorAwareRule
      */
     public function passes($attribute, $value)
     {
-        return preg_match('~^\p{Lu}~u', $value);
+        return Str::ucfirst($value) === $value;
     }
 
     /**
@@ -45,6 +46,6 @@ class UpperCase implements Rule, ValidatorAwareRule
      */
     public function message()
     {
-        return 'The title does not start with an uppercased letter';
+        return "The title does not start with an uppercased letter";
     }
 }
