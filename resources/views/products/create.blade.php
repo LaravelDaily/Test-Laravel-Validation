@@ -6,9 +6,9 @@
     <br />
     {{-- TASK: show the validation error for the specific "name" field --}}
     {{-- using one Blade directive: pseudo-code below --}}
-    {{-- @directive --}}
-    {{-- {{ $message }} --}}
-    {{-- @endDirective --}}
+    @if ($errors->first('name'))
+    {{ $errors->first('name') }}
+    @endif
     <br /><br />
     <button type="submit">Save</button>
 </form>
