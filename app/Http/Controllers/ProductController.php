@@ -24,7 +24,7 @@ class ProductController extends Controller
                 ->withErrors($validator);
         }
 
-        Product::create($validator->validated());
+        Product::create($request->validated());
 
         return 'Success';
     }

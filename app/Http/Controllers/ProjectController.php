@@ -25,7 +25,7 @@ class ProjectController extends Controller
                 ->withErrors($validator);
         }
 
-        Project::create($validator->validated());
+        Project::create($request->validated());
 
         return 'Success';
     }
