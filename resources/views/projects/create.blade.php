@@ -8,11 +8,13 @@
     @csrf
     Title:
     <br />
-    <input type="text" name="title" />
+    <input type="text" name="name" />
+    {{ $errors->first('name') }}
     <br /><br />
     Description:
     <br />
     <input type="text" name="description" />
+    {{ $errors->first('description') }}
     <br /><br />
     <button type="submit">Save</button>
 </form>
