@@ -32,7 +32,6 @@ class ValidationTest extends TestCase
         // Post without name and email should fail
         $response = $this->actingAs($user)->post('profile');
         $response->assertStatus(302);
-
         // Post with name and email should succeed
         $response = $this->actingAs($user)->post('profile', [
             'profile' => [
