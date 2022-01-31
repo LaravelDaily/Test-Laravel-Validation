@@ -2,7 +2,7 @@
     @csrf
     Name:
     <br />
-    {{-- TASK: change this field so it would contain old value after validation error --}}
+    {{ old('name') }}
     <input type="text" name="name" />
     <br /><br />
     <button type="submit">Save</button>
