@@ -1,4 +1,11 @@
 {{-- Form without any design --}}
+@if ($errors->any())
+<ul>
+    @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
 
 {{-- TASK: add the validation errors here - with whatever HTML structure you want --}}
 {{-- in case of title/description empty, visitor should see --}}
