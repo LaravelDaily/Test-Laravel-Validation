@@ -2,14 +2,15 @@
 
 namespace Tests\Feature;
 
-use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use App\Models\User;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ValidationTest extends TestCase
 {
     use RefreshDatabase;
-
+   
     public function test_simple_validation_rules()
     {
         // Post without any title should fail because title is required
@@ -41,7 +42,7 @@ class ValidationTest extends TestCase
             ]
         ]);
         $response->assertStatus(200);
-   }
+    }
 
     public function test_validation_errors_shown_in_blade()
     {
@@ -106,6 +107,7 @@ class ValidationTest extends TestCase
 
     public function test_custom_validation_rule()
     {
+        Session::start();
         $response = $this->post('articles', ['title' => 'lowercase']);
         $response->assertSessionHasErrors([
             'title' => 'The title does not start with an uppercased letter',
