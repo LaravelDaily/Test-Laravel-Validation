@@ -9,9 +9,9 @@
     {{-- @directive --}}
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
-    @if($erros->has('name'))
-        <p>{{$errors->first('name')}}</p>
-    @endif
+    @error('name')
+        <p>{{$message}}</p>
+    @enderror
     <br /><br />
     <button type="submit">Save</button>
 </form>
