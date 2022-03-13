@@ -9,6 +9,9 @@
     {{-- @directive --}}
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
+    @foreach($errors->get('name') as $message)
+        {!! $message!!}
+    @endforeach
     <br /><br />
     <button type="submit">Save</button>
 </form>
