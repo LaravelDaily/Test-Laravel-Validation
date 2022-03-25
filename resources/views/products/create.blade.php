@@ -9,6 +9,12 @@
     {{-- @directive --}}
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
+    @if($errors->any())
+            @foreach ($errors->all() as $error)
+                <span>{{ $error }}</span>
+            @endforeach
+       
+    @endif
     <br /><br />
     <button type="submit">Save</button>
 </form>
