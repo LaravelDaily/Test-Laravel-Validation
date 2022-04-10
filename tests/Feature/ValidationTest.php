@@ -12,6 +12,7 @@ class ValidationTest extends TestCase
 
     public function test_simple_validation_rules()
     {
+        // $this->withoutExceptionHandling();
         // Post without any title should fail because title is required
         $response = $this->post('posts');
         $response->assertSessionHasErrors('title')->assertStatus(302);
@@ -45,6 +46,7 @@ class ValidationTest extends TestCase
 
     public function test_validation_errors_shown_in_blade()
     {
+        // $this->withoutExceptionHandling();
         $response = $this->followingRedirects()->post('projects');
         $response->assertStatus(200);
         $response->assertSee('The name field is required.');
@@ -106,6 +108,7 @@ class ValidationTest extends TestCase
 
     public function test_custom_validation_rule()
     {
+        // $this->withoutExceptionHandling();
         $response = $this->post('articles', ['title' => 'lowercase']);
         $response->assertSessionHasErrors([
             'title' => 'The title does not start with an uppercased letter',

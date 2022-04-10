@@ -5,6 +5,9 @@
 {{-- "The name field is required." and "The description field is required." --}}
 
 <form method="POST" action="{{ route('projects.store') }}">
+    @foreach ($errors->all() as $error)
+        {{ $error }}
+    @endforeach
     @csrf
     Title:
     <br />
