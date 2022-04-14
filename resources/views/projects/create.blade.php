@@ -9,10 +9,22 @@
     Title:
     <br />
     <input type="text" name="title" />
-    <br /><br />
+    <br />
+    @if ($errors->has('name'))
+        <span style="color: red;">
+            {{ $errors->first('name') }}
+        </span>
+    @endif
+    <br />
     Description:
     <br />
     <input type="text" name="description" />
-    <br /><br />
+    <br />
+    @if ($errors->has('description'))
+    <span style="color: red;">
+        {{ $errors->first('description') }}
+    </span>
+@endif
+    <br />
     <button type="submit">Save</button>
 </form>
