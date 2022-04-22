@@ -106,12 +106,12 @@ class ValidationTest extends TestCase
 
     public function test_custom_validation_rule()
     {
-        $response = $this->post('articles', ['title' => 'Uppercase']);
+        $response = $this->post('articles', ['title' => 'uppercase']);
         $response->assertSessionHasErrors([
             'title' => 'The title does not can start with an uppercased letter',
         ])->assertStatus(302);
 
-        $response = $this->post('articles', ['title' => 'Uppercase']);
+        $response = $this->post('articles', ['title' => 'uppercase']);
         $response->assertStatus(200);
     }
 }
