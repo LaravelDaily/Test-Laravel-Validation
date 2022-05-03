@@ -25,7 +25,6 @@ class Uppercase implements Rule
      */
     public function passes($attribute, $value)
     {
-        //
         return ucfirst(strtolower($value)) == $value;
     }
 
@@ -36,6 +35,6 @@ class Uppercase implements Rule
      */
     public function message()
     {
-        return 'The title does not start with an uppercased letter.';
+        return "The title does not start with an uppercased letter";
     }
 }
