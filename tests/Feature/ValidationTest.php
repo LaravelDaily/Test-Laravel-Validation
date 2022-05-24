@@ -41,7 +41,7 @@ class ValidationTest extends TestCase
             ]
         ]);
         $response->assertStatus(200);
-   }
+    }
 
     public function test_validation_errors_shown_in_blade()
     {

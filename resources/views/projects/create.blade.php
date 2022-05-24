@@ -16,3 +16,6 @@
     <br /><br />
     <button type="submit">Save</button>
 </form>
+@foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+@endforeach
