@@ -9,6 +9,12 @@
     {{-- @directive --}}
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
+
+    @if ($errors->has('name'))
+        <span class="error">{{ $errors->first('name') }}</span>
+    @endif
+
+
     <br /><br />
     <button type="submit">Save</button>
 </form>
