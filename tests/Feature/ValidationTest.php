@@ -2,9 +2,10 @@
 
 namespace Tests\Feature;
 
-use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use App\Models\User;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ValidationTest extends TestCase
 {
@@ -12,6 +13,7 @@ class ValidationTest extends TestCase
 
     public function test_simple_validation_rules()
     {
+        Session::start();
         // Post without any title should fail because title is required
         $response = $this->post('posts');
         $response->assertSessionHasErrors('title')->assertStatus(302);
