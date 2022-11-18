@@ -79,7 +79,7 @@ class ValidationTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_update_forbidden_field()
+    public function test_update_forbidden_field() 
     {
         $user = User::factory()->create();
 
