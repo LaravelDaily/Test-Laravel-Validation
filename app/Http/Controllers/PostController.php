@@ -2,21 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRequest;
 use App\Models\Post;
-use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function store(Request $request)
-    {
-        $request->validate(
-            // ... TASK: write validation here so that "title" field
-            //           would be required and unique in the "posts" DB table
-        );
+	public function store(PostRequest $request)
+	{
+		// Saving the post
+		Post::create(['title' => $request->title]);
 
-        // Saving the post
-        Post::create(['title' => $request->title]);
-
-        return 'Success';
-    }
+		return 'Success';
+	}
 }
