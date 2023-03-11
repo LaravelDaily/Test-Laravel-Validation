@@ -16,7 +16,6 @@ If you don't know how to make a Pull Request, [here's my video with instructions
 
 This task is mostly self-served, so I'm not planning review or merge the Pull Requests. This test is for yourselves to assess your skills, the automated tests will be your answer if you passed the test :)
 
-
 ## Questions / Problems?
 
 If you're struggling with some tasks, or you have suggestions how to improve the task, create a GitHub Issue.
@@ -103,4 +102,3 @@ In `app/Http/Controllers/ArticleController.php` file, in `store` method, the cod
 Test method `test_custom_validation_rule()`.
 
 ---
-
