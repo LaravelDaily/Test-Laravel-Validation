@@ -9,6 +9,10 @@
     {{-- @directive --}}
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
-    <br /><br />
+    <br />
+    @error('name')
+    <h3>The name field is required.</h3>
+    @enderror
+    <br />
     <button type="submit">Save</button>
 </form>
