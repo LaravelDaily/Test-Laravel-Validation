@@ -7,10 +7,15 @@
 <form method="POST" action="{{ route('projects.store') }}">
     @csrf
     Title:
+    @error('name')
+        {{ $message }}
+    @enderror
     <br />
-    <input type="text" name="title" />
+    <input type="text" name="name" />
     <br /><br />
-    Description:
+    Description: @error('description')
+        {{ $message }}
+    @enderror
     <br />
     <input type="text" name="description" />
     <br /><br />

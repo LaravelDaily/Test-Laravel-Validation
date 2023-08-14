@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreItemRequest;
 use App\Models\Item;
+use App\Http\Requests\StoreItemRequest;
 
 class ItemController extends Controller
 {
@@ -16,5 +16,4 @@ class ItemController extends Controller
 
         return 'Success';
     }
-
 }
