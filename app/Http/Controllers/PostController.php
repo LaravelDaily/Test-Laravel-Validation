@@ -11,6 +11,7 @@ class PostController extends Controller
     {
         $request->validate(
             // ... TASK: write validation here so that "title" field
+            'title'=> 'required|unique:posts'
             //           would be required and unique in the "posts" DB table
         );
 
