@@ -16,7 +16,7 @@
     <br /><br />
     <button type="submit">Save</button>
 </form>
-@if($errors->any()){
+@if($errors->any())
     <div>
         <ul>
             @foreach($errors->all() as $error)
@@ -27,4 +27,4 @@
         </ul>
     </div>
 @endif
-}
+
