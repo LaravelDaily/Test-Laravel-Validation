@@ -12,7 +12,7 @@ class Uppercase implements ValidationRule
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
-        if (strtoupper($value[0]) !== $value[0]) {
+        if (ucfirst($value) !== $value) {
             $fail('The title does not start with an uppercased letter');
         }
     }
