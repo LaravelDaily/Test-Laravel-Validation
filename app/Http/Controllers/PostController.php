@@ -9,11 +9,11 @@ class PostController extends Controller
 {
     public function store(Request $request)
     {
-        $request->validate(
+        $request->validate([
             // ... TASK: write validation here so that "title" field
-            'title'=> 'required|unique:posts'
+            'title'=> 'required|unique:posts' ,
             //           would be required and unique in the "posts" DB table
-        );
+       ]);
 
         // Saving the post
         Post::create(['title' => $request->title]);
