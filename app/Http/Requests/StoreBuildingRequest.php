@@ -39,9 +39,7 @@ public function messages(): array
     public function rules()
     {
         return [
-            'name' => 'required' ,
-            'description' => 'required' ,
-            
+            'name' => 'required' ,            
         ];
     }
 }
