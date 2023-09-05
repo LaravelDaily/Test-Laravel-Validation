@@ -5,10 +5,9 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 
 // TASK: Customize the validation error message to say "Please enter the name"
-class StoreBuildingRequest extends FormRequest
+class StoreItemRequest  extends FormRequest
 {
-    protected $redirectRoute = 'buildings.create';
-
+    
     /**
      * Determine if the user is authorized to make this request.
      *
