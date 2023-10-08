@@ -22,7 +22,7 @@ class ProjectController extends Controller
 
         if ($validator->fails()) {
             return redirect('projects/create')
-                ->withErrors($validator);
+                ->withErrors($validator); 
         }
 
         Project::create($validator->validated());
