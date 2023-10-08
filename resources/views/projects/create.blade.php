@@ -9,10 +9,17 @@
     Title:
     <br />
     <input type="text" name="title" />
-    <br /><br />
+    <br />
+    @error('name')
+    <div>The name field is required.</div>
+    @enderror
+    <br />
     Description:
     <br />
     <input type="text" name="description" />
-    <br /><br />
+    <br />
+    @error('description')
+    <div>The description field is required.</div>
+    @enderror<br />
     <button type="submit">Save</button>
 </form>
