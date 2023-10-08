@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 
 // TASK: Customize the validation error message to say "Please enter the name"
@@ -28,6 +29,13 @@ class StoreBuildingRequest extends FormRequest
     {
         return [
             'name' => 'required'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Please enter the name'
         ];
     }
 }
