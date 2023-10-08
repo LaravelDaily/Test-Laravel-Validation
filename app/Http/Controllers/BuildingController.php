@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreBuildingRequest;
 use App\Models\Building;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\StoreBuildingRequest;
 
 class BuildingController extends Controller
 {
