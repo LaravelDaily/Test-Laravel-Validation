@@ -8,14 +8,16 @@ class ProfileController extends Controller
 {
     public function update(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             // TASK: imagine that in the Blade the fields are
             // <input name="profile[name]" ... />
             // <input name="profile[email]" ... />
             // Write validation rules, so both name and email are required
+            'profile.name' => 'required',
+            'profile.email' => 'required|email'
         ]);
 
-        auth()->user()->update($request->profile ?? []);
+        auth()->user()->update($request->profile ?? ['name', 'email']);
 
         return 'Success';
     }
