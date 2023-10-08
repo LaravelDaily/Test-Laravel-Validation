@@ -9,10 +9,22 @@
     Title:
     <br />
     <input type="text" name="title" />
+    Name:
+    <br />
+    <input type="text" name="name" />
     <br /><br />
     Description:
     <br />
     <input type="text" name="description" />
     <br /><br />
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <button type="submit">Save</button>
 </form>
