@@ -30,4 +30,16 @@ class StoreBuildingRequest extends FormRequest
             'name' => 'required'
         ];
     }
+
+    /**
+     * Получить сообщения об ошибках для определенных правил валидации.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'Please enter the name',
+        ];
+    }
 }
