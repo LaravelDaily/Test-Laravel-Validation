@@ -12,6 +12,8 @@ class ProfileController extends Controller
             // TASK: imagine that in the Blade the fields are
             // <input name="profile[name]" ... />
             // <input name="profile[email]" ... />
+            'profile.name' => 'required',
+            'profile.email' => 'required|email'
             // Write validation rules, so both name and email are required
         ]);
 
