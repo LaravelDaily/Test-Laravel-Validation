@@ -3,7 +3,11 @@
     Name:
     <br />
     {{-- TASK: change this field so it would contain old value after validation error --}}
-    <input type="text" name="name" />
-    <br /><br />
+    <input type="text" name="name" value="{{ old('name') }}" />
+    <br />
+    @error('name')
+        {{ $message }}
+    @enderror
+    <br />
     <button type="submit">Save</button>
 </form>
