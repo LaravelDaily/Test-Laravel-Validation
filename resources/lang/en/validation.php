@@ -139,8 +139,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'required' => [
+            'name' => 'Please enter the name',
         ],
     ],
 
