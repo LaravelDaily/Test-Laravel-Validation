@@ -24,5 +24,10 @@ Route::resource('buildings', \App\Http\Controllers\BuildingController::class);
 Route::resource('articles', \App\Http\Controllers\ArticleController::class);
 
 Route::get('/', function () {
+
+    $value = str_split('title')[0];
+    if ($value !== strtolower($value)) return 'The title does not start with an uppercased letter';
+
+
     return view('welcome');
 });

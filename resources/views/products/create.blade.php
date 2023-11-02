@@ -2,6 +2,7 @@
     @csrf
     Name:
     <br />
+    @error('name') {{$message}}  @enderror
     <input type="text" name="name" />
     <br />
     {{-- TASK: show the validation error for the specific "name" field --}}
