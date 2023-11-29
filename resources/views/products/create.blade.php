@@ -1,5 +1,16 @@
+<li>
+    @foreach ($errors->all() as $msg )
+    <ul>{{ $msg }}</ul>
+    @endforeach
+</li>
+
+
 <form method="POST" action="{{ route('products.store') }}">
     @csrf
+    Name:
+    <br />
+    <input type="text" name="name" />
+    <br />
     Name:
     <br />
     <input type="text" name="name" />
