@@ -30,4 +30,12 @@ class StoreBuildingRequest extends FormRequest
             'name' => 'required'
         ];
     }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Please enter the name',
+            // Add other custom error messages for your fields if needed
+        ];
+    }
+
 }
