@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 // TASK: Customize the validation error message to say "Please enter the name"
 class StoreItemRequest extends FormRequest
 {
-    protected $redirectRoute = 'buildings.create';
+    protected $redirectRoute = 'products.create';
 
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,8 @@ class StoreItemRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required'
+            'name' => 'required',
+            'description'=>'required'
         ];
     }
 }
