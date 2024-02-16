@@ -10,5 +10,8 @@
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
     <br /><br />
+    @error('name')
+        <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
     <button type="submit">Save</button>
 </form>
