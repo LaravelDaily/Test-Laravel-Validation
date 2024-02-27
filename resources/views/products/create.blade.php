@@ -2,10 +2,13 @@
     @csrf
     Name:
     <br />
-    <input type="text" name="name" />
+    <input type="text" name="name" class="@error('name') is-invalid @enderror"/>
     <br />
     {{-- TASK: show the validation error for the specific "name" field --}}
     {{-- using one Blade directive: pseudo-code below --}}
+    @error('name')
+        <span>{{ $message }}</span>
+    @enderror
     {{-- @directive --}}
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
