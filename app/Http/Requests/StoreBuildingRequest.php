@@ -31,7 +31,7 @@ class StoreBuildingRequest extends FormRequest
         ];
     }
 
-    public function messages():{
+    public function messages(){
         return [
             'name.required'=>'Please enter the name'
         ];
