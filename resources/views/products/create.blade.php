@@ -11,4 +11,7 @@
     {{-- @endDirective --}}
     <br /><br />
     <button type="submit">Save</button>
+    @error('name')
+        {{ $message }}
+    @enderror
 </form>

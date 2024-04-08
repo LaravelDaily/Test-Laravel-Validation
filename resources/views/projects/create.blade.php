@@ -15,4 +15,10 @@
     <input type="text" name="description" />
     <br /><br />
     <button type="submit">Save</button>
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <p>{{ $error }}</p>
+        @endforeach
+    @endif
+
 </form>
