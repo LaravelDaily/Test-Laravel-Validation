@@ -6,9 +6,11 @@
     <br />
     {{-- TASK: show the validation error for the specific "name" field --}}
     {{-- using one Blade directive: pseudo-code below --}}
+    @error('name')
     {{-- @directive --}}
-    {{-- {{ $message }} --}}
+    {{ $message }}
     {{-- @endDirective --}}
+@enderror
     <br /><br />
     <button type="submit">Save</button>
 </form>
