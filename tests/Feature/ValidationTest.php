@@ -81,6 +81,8 @@ class ValidationTest extends TestCase
 
     public function test_update_forbidden_field()
     {
+        $this->withoutExceptionHandling();
+
         $user = User::factory()->create();
 
         // field is_admin should not be possible to update
