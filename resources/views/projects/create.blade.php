@@ -8,10 +8,16 @@
     @csrf
     Title:
     <br />
+    @error('name')
+        {{ $errors->first('name') }}
+    @enderror
     <input type="text" name="title" />
     <br /><br />
     Description:
     <br />
+    @error('description')
+        {{ $errors->first('description') }}
+    @enderror
     <input type="text" name="description" />
     <br /><br />
     <button type="submit">Save</button>
