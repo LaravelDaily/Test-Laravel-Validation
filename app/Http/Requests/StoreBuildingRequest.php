@@ -27,7 +27,14 @@ class StoreBuildingRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required'
+            'name' => ['required']
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Please enter the name'
         ];
     }
 }
