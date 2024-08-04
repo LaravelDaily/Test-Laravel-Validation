@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class PostController extends Controller
 {
@@ -12,6 +13,12 @@ class PostController extends Controller
         $request->validate(
             // ... TASK: write validation here so that "title" field
             //           would be required and unique in the "posts" DB table
+            [
+                'title' => [
+                    'required',
+                    Rule::unique('posts'),
+                ]
+            ]
         );
 
         // Saving the post
