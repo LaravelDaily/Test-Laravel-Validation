@@ -7,6 +7,9 @@
     {{-- TASK: show the validation error for the specific "name" field --}}
     {{-- using one Blade directive: pseudo-code below --}}
     {{-- @directive --}}
+    @error('name')
+    <p> {{$message}}</p>
+    @enderror
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
     <br /><br />

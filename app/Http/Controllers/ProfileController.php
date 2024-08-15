@@ -9,6 +9,9 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         $request->validate([
+
+            'profile.name' => 'required|string',
+            'profile.email' => 'required|email'
             // TASK: imagine that in the Blade the fields are
             // <input name="profile[name]" ... />
             // <input name="profile[email]" ... />
