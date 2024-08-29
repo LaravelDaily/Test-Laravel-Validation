@@ -8,11 +8,17 @@
     @csrf
     Title:
     <br />
-    <input type="text" name="title" />
+    <input type="text" name="name" />
+    @if ($errors->has('name'))
+        <p class="error">{{ $errors->first('name') }}</p>
+    @endif
     <br /><br />
     Description:
     <br />
     <input type="text" name="description" />
+    @if ($errors->has('description'))
+        <p class="error">{{ $errors->first('description') }}</p>
+    @endif
     <br /><br />
     <button type="submit">Save</button>
 </form>
