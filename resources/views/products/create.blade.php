@@ -3,6 +3,9 @@
     Name:
     <br />
     <input type="text" name="name" />
+    @error('name')
+        <span class="text-red-500">{{ $message }}</span>
+    @enderror
     <br />
     {{-- TASK: show the validation error for the specific "name" field --}}
     {{-- using one Blade directive: pseudo-code below --}}
