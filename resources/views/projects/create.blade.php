@@ -8,11 +8,9 @@
     @csrf
     Title:
     <br />
-    <input type="text" name="title" />
-    <br /><br />
+    <input type="text" name="title" oninvalid="alert('The name field is required.');" required/>    <br /><br />
     Description:
     <br />
-    <input type="text" name="description" />
-    <br /><br />
+    <input type="text" name="description" oninvalid="alert('The description field is required.');" required />    <br /><br />
     <button type="submit">Save</button>
 </form>
