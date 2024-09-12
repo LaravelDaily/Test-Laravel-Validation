@@ -15,9 +15,13 @@ class BuildingController extends Controller
     }
 
     // TASK: Customize the validation error message to say "Please enter the name"
+
+    /**
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
     public function store(StoreBuildingRequest $request)
     {
-        Building::create($validator->validated());
+        Building::create($request->validated());
 
         return 'Success';
     }
