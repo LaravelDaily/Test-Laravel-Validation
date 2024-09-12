@@ -16,3 +16,8 @@
     <br /><br />
     <button type="submit">Save</button>
 </form>
+
+@forelse($errors->all() as $error)
+    <p>{{ $error }}</p>
+@empty
+@endforelse

@@ -12,3 +12,7 @@
     <br /><br />
     <button type="submit">Save</button>
 </form>
+
+@error('name')
+    <p>{{ $message }}</p>
+@enderror
