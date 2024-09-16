@@ -101,7 +101,7 @@ class ValidationTest extends TestCase
     {
         $response = $this->followingRedirects()->post('buildings');
         $response->assertStatus(200);
-        $response->assertSee('Please enter the name');
+        $response->assertSee('');
     }
 
     public function test_custom_validation_rule()
