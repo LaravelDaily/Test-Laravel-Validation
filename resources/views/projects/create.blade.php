@@ -8,10 +8,20 @@
     @csrf
     Title:
     <br />
+    <ul>
+        @foreach($errors->get('name') as $message)
+        <li>{{$message}}</li>
+        @endforeach
+    </ul>
     <input type="text" name="title" />
     <br /><br />
     Description:
     <br />
+    <ul>
+        @foreach($errors->get('description') as $message)
+        <li>{{$message}}</li>
+        @endforeach
+    </ul>
     <input type="text" name="description" />
     <br /><br />
     <button type="submit">Save</button>
