@@ -9,6 +9,12 @@ class StoreBuildingRequest extends FormRequest
 {
     protected $redirectRoute = 'buildings.create';
 
+    public function messages()
+    {
+        return [
+            'name.required' => 'Please enter the name'
+        ];
+    }
     /**
      * Determine if the user is authorized to make this request.
      *

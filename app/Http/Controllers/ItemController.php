@@ -12,6 +12,10 @@ class ItemController extends Controller
     //   and validation rules: name is required, and description is required
     public function store(StoreItemRequest $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required'
+        ]);
         Item::create($request->validated());
 
         return 'Success';
