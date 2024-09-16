@@ -7,7 +7,10 @@
     {{-- TASK: show the validation error for the specific "name" field --}}
     {{-- using one Blade directive: pseudo-code below --}}
     {{-- @directive --}}
-    {{-- {{ $message }} --}}
+    @error('name')
+        <input class="@error('name', 'post') is-invalid @enderror">
+        {{ $message }}
+    @enderror
     {{-- @endDirective --}}
     <br /><br />
     <button type="submit">Save</button>
