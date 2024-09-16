@@ -13,6 +13,7 @@ class ProfileController extends Controller
             // <input name="profile[name]" ... />
             // <input name="profile[email]" ... />
             // Write validation rules, so both name and email are required
+            'profile' => ['array:name,email', 'required'],
         ]);
 
         auth()->user()->update($request->profile ?? []);
