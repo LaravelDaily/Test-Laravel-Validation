@@ -8,7 +8,11 @@ class ProfileController extends Controller
 {
     public function update(Request $request)
     {
+        // dd($request->all());
+
         $request->validate([
+            'profile' => ['required', 'array'],
+            'profile.*' => ['required'],
             // TASK: imagine that in the Blade the fields are
             // <input name="profile[name]" ... />
             // <input name="profile[email]" ... />
