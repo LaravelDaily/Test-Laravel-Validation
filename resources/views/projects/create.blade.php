@@ -5,6 +5,14 @@
 {{-- "The name field is required." and "The description field is required." --}}
 
 <form method="POST" action="{{ route('projects.store') }}">
+    <ul>
+        @error('name')
+        <li style="color: red;">{{ $message }}</li>    
+        @enderror
+        @error('description')
+        <li style="color: red;">{{ $message }}</li>    
+        @enderror
+    </ul>
     @csrf
     Title:
     <br />
