@@ -6,6 +6,11 @@
 
 <form method="POST" action="{{ route('projects.store') }}">
     @csrf
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
     Title:
     <br />
     <input type="text" name="title" />
