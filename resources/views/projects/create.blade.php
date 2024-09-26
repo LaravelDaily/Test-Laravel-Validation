@@ -8,11 +8,17 @@
     @csrf
     Title:
     <br />
-    <input type="text" name="title" />
+    <input type="text" name="name" />
     <br /><br />
+    @error('name')
+        {{ $message }}
+    @enderror
     Description:
     <br />
     <input type="text" name="description" />
     <br /><br />
+    @error('description')
+        {{ $message }}
+    @enderror
     <button type="submit">Save</button>
 </form>
