@@ -9,6 +9,13 @@
     {{-- @directive --}}
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->get('name') as $message)
+                <p>{{ $message }}</p>
+            @endforeach
+        </ul>
+    </div>
     <br /><br />
     <button type="submit">Save</button>
 </form>
