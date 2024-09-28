@@ -30,4 +30,13 @@ class StoreBuildingRequest extends FormRequest
             'name' => 'required'
         ];
     }
+
+    //Customize Validation Messages.
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Please enter the name'
+        ];
+    }
 }
