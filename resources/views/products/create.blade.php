@@ -9,6 +9,11 @@
     {{-- @directive --}}
     {{-- {{ $message }} --}}
     {{-- @endDirective --}}
+    @error('name')
+    <div class="error" style="color: red;">
+        {{ $message }}
+    </div>
+@enderror
     <br /><br />
     <button type="submit">Save</button>
 </form>
