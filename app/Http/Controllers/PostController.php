@@ -13,7 +13,7 @@ class PostController extends Controller
             // ... TASK: write validation here so that "title" field
             //           would be required and unique in the "posts" DB table
             [
-                'title'=>['required','unique:post,title']
+                'title'=>['required','unique:posts,title']
             ]
         );
 
